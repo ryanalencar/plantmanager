@@ -14,7 +14,7 @@ import watering from '../assets/watering.png'
 import colors from '../styles/colors'
 import fonts from '../styles/fonts'
 
-function Wellcome() {
+function Welcome() {
   return (
     <SafeAreaView style={style.container}>
       <View style={style.wrapper}>
@@ -74,4 +74,4 @@ const style = StyleSheet.create({
   },
 })
 
-export default Wellcome
+export default Welcome
