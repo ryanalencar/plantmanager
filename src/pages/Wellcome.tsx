@@ -14,7 +14,7 @@ import watering from '../assets/watering.png'
 import colors from '../styles/colors'
 import fonts from '../styles/fonts'
 
-function Wellcome(): any {
+function Wellcome() {
   return (
     <SafeAreaView style={style.container}>
       <View style={style.wrapper}>

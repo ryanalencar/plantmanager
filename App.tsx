@@ -1,7 +1,5 @@
 /* eslint-disable camelcase */
-/* eslint-disable react-native/no-inline-styles */
 import React from 'react'
-import { Text, View } from 'react-native'
 import {
   useFonts,
   Jost_400Regular,
@@ -9,7 +7,8 @@ import {
 } from '@expo-google-fonts/jost'
 import AppLoading from 'expo-app-loading'
 
-import Wellcome from './src/pages/Wellcome'
+// import Wellcome from './src/pages/Wellcome'
+import UserIdentification from './src/pages/UserIdentification'
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -19,5 +18,5 @@ export default function App() {
 
   if (!fontsLoaded) return <AppLoading />
 
-  return <Wellcome />
+  return <UserIdentification />
 }

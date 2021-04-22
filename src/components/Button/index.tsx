@@ -12,7 +12,7 @@ interface IButtonProps extends TouchableOpacityProps {
   title: string
 }
 
-function Button({ title, ...rest }: IButtonProps): any {
+function Button({ title, ...rest }: IButtonProps) {
   return (
     <TouchableOpacity style={style.button} {...rest}>
       <Text style={style.buttonText}>{title}</Text>
