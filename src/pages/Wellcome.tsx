@@ -1,5 +1,12 @@
 import React from 'react'
-import { Text, Image, SafeAreaView, StyleSheet } from 'react-native'
+import {
+  Text,
+  Image,
+  SafeAreaView,
+  StyleSheet,
+  TouchableOpacity,
+  Dimensions,
+} from 'react-native'
 
 import watering from '../assets/watering.png'
 import Button from '../components/Button'
@@ -11,25 +18,39 @@ function Wellcome(): any {
       <Text style={style.title}>
         Gerencie {'\n'} suas plantas {'\n'}de forma fácil
       </Text>
-      <Image source={watering} style={style.image} />
+      <Image source={watering} style={style.image} resizeMode='contain' />
       <Text style={style.subtitle}>
         Não esqueça mais de regar suas plantas. Nós cuidamos de lembrar você
         sempre que precisar.
       </Text>
-      <Button title='>' activeOpacity={0.8} />
+      <TouchableOpacity activeOpacity={0.8} style={style.button}>
+        <Text style={style.buttonText}>{'>'}</Text>
+      </TouchableOpacity>
     </SafeAreaView>
   )
 }
 
 const style = StyleSheet.create({
+  button: {
+    alignItems: 'center',
+    backgroundColor: colors.green,
+    borderRadius: 16,
+    height: 56,
+    justifyContent: 'center',
+    marginBottom: 20,
+    width: 56,
+  },
+  buttonText: {
+    color: colors.white,
+    fontSize: 24,
+  },
   container: {
     alignItems: 'center',
     flex: 1,
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
   },
   image: {
-    height: 294,
-    width: 292,
+    height: Dimensions.get('window').width * 0.7,
   },
   subtitle: {
     color: colors.heading,
