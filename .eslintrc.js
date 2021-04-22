@@ -34,7 +34,12 @@ module.exports = {
     },
   },
   rules: {
-    'prettier/prettier': 'error',
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
     'react/jsx-filename-extension': [
       'warn',
       { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
@@ -43,5 +48,6 @@ module.exports = {
     'jsx-quotes': ['error', 'prefer-single'],
     'no-use-before-define': 0,
     'import/extensions': 'off',
+    'react/jsx-props-no-spreading': 'off',
   },
 }
